@@ -1,0 +1,26 @@
+{
+  "name": "SinglePageApp",
+  "homepage": "https://github.com/rohitbijani/angularJS",
+  "authors": [
+    "rohitbijani <rohit.bijani007@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "^1.1.8",
+    "angular": "^1.6.10",
+    "angular-ui-router": "^1.0.15",
+    "underscore": "^1.9.0"
+  },
+  "resolutions": {
+    "underscore": "~1.8"
+  }
+}

@@ -1,0 +1,45 @@
+<div layout="column" ng-cloak>
+  <section layout="row">
+    <md-sidenav  class="md-sidenav-left" md-component-id="left" md-whiteframe="4" md-disable-backdrop>
+      <md-toolbar class="md-toolbar-tools" id="sidenav-menu">
+        <h3>FILTER BY</h3>
+      </md-toolbar>
+      <md-content layout-margin id="sidenav-content">
+        <div>
+          <fieldset>
+            <legend><h3>Manufacturer</h3></legend>
+            <div ng-repeat="x in manufacturerArray">
+              <md-checkbox ng-checked="exists(x, manufacturerSelected)" ng-click="checkbox(x,manufacturerSelected)">
+                {{x}}
+              </md-checkbox>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><h3>Storage</h3></legend>
+            <div ng-repeat="x in storageArray">
+              <md-checkbox ng-checked="exists(x, storageSelected)" ng-click="checkbox(x,storageSelected)">
+                {{x + " GB"}}
+              </md-checkbox>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><h3>OS</h3></legend>
+            <div ng-repeat="x in osArray">
+              <md-checkbox ng-checked="exists(x, osSelected)" ng-click="checkbox(x,osSelected)">
+                {{x}}
+              </md-checkbox>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend><h3>Camera</h3></legend>
+            <div ng-repeat="x in cameraArray">
+              <md-checkbox ng-checked="exists(x, cameraSelected)" ng-click="checkbox(x,cameraSelected)">
+                {{x + " MP"}}
+              </md-checkbox>
+            </div>
+          </fieldset>
+        </div>
+    </md-content>
+    </md-sidenav>
+  </section>
+</div>

@@ -1,0 +1,30 @@
+<div layout="row" layout-wrap layout-align="center">
+  <div ng-repeat="x in products | mobileFilter: manufacturerSelected: storageSelected: osSelected: cameraSelected"
+    flex-gt-sm="30" layout-align="center">
+    <md-card class="mobile-card">
+      <img  ng-src="{{x.image.small}}" flex="75%">
+      <md-card-title>
+          <md-card-title-text>
+            <span class="md-headline">{{x.name}}</span>
+          </md-card-title-text>
+        </md-card-title>
+        <md-card-content>
+          <p>
+            <b>Manufacturer: </b>{{x.specs.manufacturer}}
+          </p>
+          <p>
+            <b>Storage: </b>{{x.specs.storage}} GB <b> OS: </b>{{x.specs.os}}
+          </p>
+          <p>
+            <b>Camera: </b>{{x.specs.camera}} MP
+          </p>
+        </md-card-content>
+        <md-card-actions layout="row" layout-align="end center">
+          <md-button class="md-raised" id="buy-button" ng-click="showAlert($event,x)">VIEW</md-button>
+          <md-button ng-click="addMobile(x)"><i class="material-icons">add_shopping_cart</i>
+            <p><i><b>&nbsp ${{x.price}} </b></i></p>
+          </md-button>
+        </md-card-actions>
+      </md-card>
+    </div>
+</div>

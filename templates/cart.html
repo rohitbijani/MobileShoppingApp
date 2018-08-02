@@ -1,0 +1,22 @@
+<body>
+  <div id="cart">
+<table>
+<tr ng-repeat= "x in phone">
+  <td>{{x.name}}</td>
+  <td><img ng-src="{{x.image.small}}" style="width:150px"></td>
+  <td><select ng-model="count" ng-change="sum(x,count)" ng-init="sum(x,0)">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+  </select>
+</td>
+  <td>{{x.price | currency}}</td>
+  <td ng-model="subTotal">{{x.sum | currency}}</td>
+</tr>
+</table>
+<br>
+<div><b>TOTAL: {{total | currency}}</b></div>
+</div>
+</body>
